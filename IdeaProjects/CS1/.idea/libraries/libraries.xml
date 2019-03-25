@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/jfugue-4.0.3-with-musicxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/SimpleComposer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/SimplePainter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

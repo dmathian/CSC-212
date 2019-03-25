@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="80" />
+    <option name="y" value="50" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553534022653" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GraySpace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shapes.GraySpace" />
+      <module name="CS1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shapes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GraySpace" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>
