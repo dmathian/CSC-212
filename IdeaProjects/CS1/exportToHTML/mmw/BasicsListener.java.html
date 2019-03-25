@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>BasicsListener.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+BasicsListener.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+* program to check out (view and possibly listen to) the eight melodic 
+* sequences classified as &quot;Basic&quot; sequences in the Modular Melody World 
+ */</span>
+
+
+<span class="s2">package </span>mmw;
+
+<span class="s2">import </span>composer.SComposer;
+
+<span class="s2">public class </span>BasicsListener {
+
+    <span class="s2">public static void </span>main(String [] args ) {
+        SComposer c = <span class="s2">new </span>SComposer();
+        c.text();
+       System.out.println(<span class="s3">&quot;c.mms1 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms2 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms3 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms4 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms5 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms6 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms7 ...&quot;</span>); c.mms1(); space(c);
+       System.out.println(<span class="s3">&quot;c.mms8 ...&quot;</span>); c.mms1(); space(c);
+       c.untext();
+    }
+
+    <span class="s2">private static void </span>space(SComposer c) {
+        c.untext(); c.rest(<span class="s4">2</span>); c.text();
+    }
+}
+</pre>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Dorothy.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Dorothy.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+* Name that tune! 
+ */</span>
+
+<span class="s2">package </span>mmw;
+
+<span class="s2">import </span>note.SNote;
+
+<span class="s2">import </span>org.omg.CORBA.PUBLIC_MEMBER;
+
+<span class="s2">public class </span>Dorothy {
+
+    <span class="s2">public static void </span>main(String [] args) {
+        SNote note = <span class="s2">new </span>SNote ();
+        note.text();
+        note.x2(); note.play();
+        note.rp(<span class="s3">7</span>); note.play();
+        note.s2(); note.lp(); note.play();
+        note.lp(<span class="s3">2</span>); note.s2(); note.play();
+        note.rp(); note.play();
+        note.x2(); note.rp(); note.play();
+        note.rp(); note.play();
+        System.out.println();
+    }
+}
+</pre>
+</body>
+</html>

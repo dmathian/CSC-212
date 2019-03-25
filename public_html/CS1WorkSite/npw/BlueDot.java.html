@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>BlueDot.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+BlueDot.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+*program to paint a blue dot in the context of the Nonrepresentational 
+* painting World, NPW 
+ */</span>
+
+<span class="s2">package </span>npw;
+
+<span class="s2">import </span>java.awt.Color;
+<span class="s2">import </span>javax.swing.SwingUtilities;
+<span class="s2">import </span>painter.SPainter;
+<span class="s2">import </span>shapes.SCircle;
+
+
+<span class="s2">public class </span>BlueDot {
+
+    <span class="s0">//THE SOLUTION TO THE BLUE DOT PROBLEM</span>
+
+    <span class="s2">private void </span>paintTheImage() {
+        SPainter klee = <span class="s2">new </span>SPainter(<span class="s3">&quot;Blue Dot&quot;</span>, <span class="s4">600</span>,<span class="s4">600</span>);
+        SCircle dot = <span class="s2">new </span>SCircle(<span class="s4">200</span>);
+        klee.setColor(Color.BLUE);
+        klee.paint(dot);
+    }
+
+    <span class="s0">//REQUIRED INFRASTRUCTURE</span>
+
+    <span class="s2">public </span>BlueDot() {
+        paintTheImage();
+    }
+
+    <span class="s2">public static void </span>main(String [] args) {
+        SwingUtilities.invokeLater(<span class="s2">new </span>Runnable() {
+            <span class="s2">public void </span>run () {
+                <span class="s2">new </span>BlueDot();
+            }
+        });
+    }
+}
+</pre>
+</body>
+</html>

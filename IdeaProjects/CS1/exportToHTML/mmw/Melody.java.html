@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Melody.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Melody.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+*A sequence of simple modular melodic sequences. 
+ */</span>
+
+<span class="s2">package </span>mmw;
+
+<span class="s2">import </span>composer.SComposer;
+
+<span class="s2">public class </span>Melody  {
+    <span class="s2">public static void </span>main(String [] args) {
+        SComposer c = <span class="s2">new </span>SComposer();
+        c.text();
+        c.mms5();
+        c.rp(); c.mms5(); c.lp();
+        c.lp(); c.mms5(); c.rp();
+        c.mms5();
+        c.untext();
+        c.mms5();
+        c.rp(); c.mms5(); c.lp();
+        c.lp(); c.mms5(); c.rp();
+        c.mms5();
+        c.mms7();
+        c.rp(); c.mms8(); c.lp();
+        c.lp(); c.mms7(); c.rp();
+        c.mms8();
+    }
+}
+</pre>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>RedCross.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #000080; font-weight: bold;}
+.s2 { color: #808080; font-style: italic;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+RedCross.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">package </span>npw;
+
+<span class="s1">import </span>java.awt.Color;
+<span class="s1">import </span>javax.swing.SwingUtilities;
+<span class="s1">import </span>painter.SPainter;
+<span class="s1">import </span>shapes.SRectangle;
+
+
+<span class="s1">public class </span>RedCross {
+
+    <span class="s2">//THE SOLUTION TO THE BLUE DOT PROBLEM</span>
+
+    <span class="s1">private void </span>paintTheImage() {
+        SPainter klee = <span class="s1">new </span>SPainter(<span class="s3">&quot;Red Cross&quot;</span>, <span class="s4">600</span>,<span class="s4">600</span>);
+        SRectangle rectangle = <span class="s1">new </span>SRectangle(<span class="s4">500</span>, <span class="s4">100</span>);
+        klee.setColor(Color.RED);
+        klee.paint(rectangle);
+        klee.tl();
+        klee.paint(rectangle);
+    }
+
+    <span class="s2">//REQUIRED INFRASTRUCTURE</span>
+
+    <span class="s1">public </span>RedCross() {
+        paintTheImage();
+    }
+
+    <span class="s1">public static void </span>main(String [] args) {
+        SwingUtilities.invokeLater(<span class="s1">new </span>Runnable() {
+            <span class="s1">public void </span>run () {
+                <span class="s1">new </span>RedCross();
+            }
+        });
+    }
+}
+</pre>
+</body>
+</html>
