@@ -5,12 +5,13 @@
 
 package npw;
 
-import java.awt.Color;
-import java.util.Random;
-import javax.swing.*;
 import painter.SPainter;
 import shapes.SCircle;
 import shapes.SSquare;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Random;
 
 public class Balloons {
 
@@ -31,12 +32,12 @@ public class Balloons {
 private void paintTheImage() {
        SPainter painter = new SPainter("Balloons", 600, 600);
        paintSky(painter); // ask IntelliJ to generate the stub
-     int nrOfBalloons = 100;
+     int nrOfBalloons = 200;
     paintBalloons(painter,nrOfBalloons); //ask IntelliJ to generate the stub
 
 }
 private void paintSky(SPainter painter){
-      painter.setColor(Color.BLUE);
+      painter.setColor(Color.lightGray);
       SSquare sky = new SSquare(2000);
     painter.paint(sky);
 }
@@ -44,7 +45,7 @@ private void paintBalloons(SPainter painter, int nrOfBalloons){
         int i =1;
         while (i <= nrOfBalloons){
             paintOneBalloon(painter); // ask IntelliJ to generate the stub
-            i = 1 + 1;
+            i = i + 1;
         }
 }
 private void paintOneBalloon(SPainter painter) {
@@ -57,13 +58,13 @@ private void paintOneBalloon(SPainter painter) {
            painter.setColor(Color.orange);
 
         } else {
-            painter.setColor(Color.YELLOW);
+            painter.setColor(Color.black);
         }
         painter.move();
         int balloonRadius = 20;
         SCircle balloon = new SCircle(balloonRadius);
         painter.paint(balloon);
-        painter.setColor(Color.BLACK);
+        painter.setColor(Color.white);
         painter.draw(balloon);
 
 

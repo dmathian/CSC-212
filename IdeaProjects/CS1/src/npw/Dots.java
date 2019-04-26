@@ -7,7 +7,7 @@ import shapes.SCircle;
 import javax.swing.*;
 import java.awt.*;
 
-public class Dot {
+public class Dots {
     //THE SOLUTION TO THE BLUE DOT PROBLEM
 
        public void drawTop(SPainter paintBrush, SCircle smallDot, SCircle smallerDot, SCircle bigDot){
@@ -90,14 +90,14 @@ public class Dot {
 
         //REQUIRED INFRASTRUCTURE
 
-        public Dot() {
+        public Dots() {
             paintTheImage();
         }
 
         public static void main(String [] args) {
             SwingUtilities.invokeLater(new Runnable() {
                 public void run () {
-                    new npw.Dot();
+                    new npw.Dots();
                 }
             });
         }

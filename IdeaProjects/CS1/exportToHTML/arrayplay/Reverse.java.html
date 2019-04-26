@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Reverse.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #008000; font-weight: bold;}
+.s3 { color: #0000ff;}
+.s4 { color: #808080; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Reverse.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span>arrayplay;
+
+
+<span class="s0">import </span>java.io.File;
+<span class="s0">import </span>java.io.FileNotFoundException;
+<span class="s0">import </span>java.io.IOException;
+<span class="s0">import </span>java.io.PrintWriter;
+<span class="s0">import </span>java.util.Scanner;
+
+<span class="s0">public class </span>Reverse {
+
+    <span class="s0">public static void </span>main(String[]args) <span class="s0">throws </span>FileNotFoundException, IOException{
+        String inputFileName = <span class="s2">&quot;Cow.text&quot;</span>;
+        String outputFileName = <span class="s2">&quot;CowReversed.text&quot;</span>;
+        String[] words = readWordsFromFile(inputFileName);
+        writeWordsToFile(words,outputFileName);
+    }
+
+
+    <span class="s0">private static final int </span>LIMIT = <span class="s3">1000</span>;
+
+    <span class="s0">private static </span>String [] readWordsFromFile(String inputFileName) <span class="s0">throws </span>FileNotFoundException{
+        <span class="s4">//eqaute a scanner with the input file</span>
+        Scanner scanner = establishScanner(inputFileName);
+        <span class="s4">//read the words from the file into an oversized array</span>
+        String[] temp = <span class="s0">new </span>String[LIMIT];
+        <span class="s0">int </span>index = <span class="s3">0</span>;
+        <span class="s0">while </span>(scanner.hasNext()) {
+            String word = scanner.next();
+            temp[index] = word;
+            index = index + <span class="s3">1</span>;
+        }
+        <span class="s0">int </span>wordCount = index;
+        <span class="s4">//transfer the words to a perfectly sized array</span>
+        String[] words = <span class="s0">new </span>String[wordCount];
+        <span class="s0">for </span>(<span class="s0">int </span>x = <span class="s3">0</span>; x &lt; wordCount; x = x + <span class="s3">1</span>) {
+            words[x] = temp[x];
+        }
+        <span class="s4">//return the words</span>
+        <span class="s0">return </span>words;
+    }
+    <span class="s0">private static void </span>writeWordsToFile(String[] words, String outputFileName) <span class="s0">throws </span>IOException {
+        <span class="s4">// Equate a printer with an output file</span>
+        PrintWriter printer = getPrintWriter(outputFileName);
+        <span class="s4">// Print the words to the file</span>
+        <span class="s0">for </span>( <span class="s0">int </span>x = words.length-<span class="s3">1</span>; x &gt;= <span class="s3">0</span>; x = x - <span class="s3">1 </span>) {
+            printer.println(words[x]);
+        }
+        printer.close();
+    }
+
+    <span class="s0">private static </span>Scanner establishScanner(String inputFileName) <span class="s0">throws </span>FileNotFoundException {
+        String fullFileName = createFullFileName(inputFileName);
+        <span class="s0">return new </span>Scanner(<span class="s0">new </span>File(fullFileName));
+    }
+    <span class="s0">private static </span>PrintWriter getPrintWriter(String outputFileName) <span class="s0">throws </span>FileNotFoundException {
+        String fullFileName = createFullFileName(outputFileName);
+        PrintWriter printer = <span class="s0">new </span>PrintWriter(fullFileName);
+        <span class="s0">return </span>printer;
+    }
+
+    <span class="s4">// Create the full file name for a simple file name, assuming that it will be</span>
+    // found in the CS1Files/data subdirectory of the user’s home directory.
+
+    <span class="s0">private static </span>String createFullFileName(String fileName) {
+        String separator = System.getProperty(<span class="s2">&quot;file.separator&quot;</span>);
+        String home = System.getProperty(<span class="s2">&quot;user.home&quot;</span>);
+        String path = home + separator + <span class="s2">&quot;CS1Files&quot; </span>+ separator + <span class="s2">&quot;CS1Data&quot; </span>+ separator;
+        String fullFileName = path + fileName;
+        <span class="s0">return </span>fullFileName;
+    }
+
+}
+
+
+</pre>
+</body>
+</html>

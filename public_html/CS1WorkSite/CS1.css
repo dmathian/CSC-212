@@ -1,5 +1,5 @@
 body {
-    background-color:BLUE;
+    background-color:MAROON;
     font-family: serif;
     font-size: large;
     color: black;
@@ -17,7 +17,7 @@ em {
 }
 
 h1 {
-    color:Maroon;
+    color:MAROON;
     font-size: 190%;
     text-align:center;
        
@@ -47,7 +47,7 @@ div.block {
     padding-bottom: 5px;
     padding-right: 20px;
     margin: 20px;
-	background-color:#C3EBE7;
+    background-color:#C3EBE7;
 }
 
 div.zblock {
@@ -57,6 +57,7 @@ div.zblock {
     padding-bottom: 5px;
     padding-right: 20px;
     margin: 20px;
+    
 }
 
 div.iblock {

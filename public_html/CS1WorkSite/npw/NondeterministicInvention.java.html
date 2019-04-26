@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>NondeterministicInvention.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #808080; font-style: italic;}
+.s3 { color: #008000; font-weight: bold;}
+.s4 { color: #0000ff;}
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+NondeterministicInvention.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">package </span>npw;
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s0">import </span>painter.SPainter;
+<a name="l4"><span class="ln">4    </span></a><span class="s0">import </span>shapes.SRectangle;
+<a name="l5"><span class="ln">5    </span></a>
+<a name="l6"><span class="ln">6    </span></a><span class="s0">import </span>javax.swing.*;
+<a name="l7"><span class="ln">7    </span></a><span class="s0">import </span>java.awt.*;
+<a name="l8"><span class="ln">8    </span></a><span class="s0">import </span>java.util.Random;
+<a name="l9"><span class="ln">9    </span></a>
+<a name="l10"><span class="ln">10   </span></a>
+<a name="l11"><span class="ln">11   </span></a><span class="s0">public class </span>NondeterministicInvention {
+<a name="l12"><span class="ln">12   </span></a>    <span class="s2">//REQUIRED INFRASTRUCTURE</span>
+<a name="l13"><span class="ln">13   </span></a>    <span class="s0">public </span>NondeterministicInvention() {
+<a name="l14"><span class="ln">14   </span></a>        paintTheImage();
+<a name="l15"><span class="ln">15   </span></a>    }
+<a name="l16"><span class="ln">16   </span></a>
+<a name="l17"><span class="ln">17   </span></a>    <span class="s0">public static void </span>main(String[] args) {
+<a name="l18"><span class="ln">18   </span></a>        SwingUtilities.invokeLater( <span class="s0">new </span>Runnable() {
+<a name="l19"><span class="ln">19   </span></a>            <span class="s0">public void </span>run() {
+<a name="l20"><span class="ln">20   </span></a>                <span class="s0">new </span>NondeterministicInvention();
+<a name="l21"><span class="ln">21   </span></a>            }
+<a name="l22"><span class="ln">22   </span></a>        });
+<a name="l23"><span class="ln">23   </span></a>    }
+<a name="l24"><span class="ln">24   </span></a>
+<a name="l25"><span class="ln">25   </span></a>    <span class="s2">// THE PAINTER DOING ITS THING</span>
+<a name="l26"><span class="ln">26   </span></a>    <span class="s0">private void </span>paintTheImage() {
+<a name="l27"><span class="ln">27   </span></a>        SPainter painter = <span class="s0">new </span>SPainter(<span class="s3">&quot;Invention 2&quot;</span>, <span class="s4">600</span>, <span class="s4">600</span>);
+<a name="l28"><span class="ln">28   </span></a>        <span class="s0">int </span>nrOfRectangles = <span class="s4">300</span>;
+<a name="l29"><span class="ln">29   </span></a>        paintRectangles(painter, nrOfRectangles);  <span class="s2">// ask IntelliJ to generate the stub</span>
+<a name="l30"><span class="ln">30   </span></a>    }
+<a name="l31"><span class="ln">31   </span></a>
+<a name="l32"><span class="ln">32   </span></a>    <span class="s0">private void </span>paintRectangles(SPainter painter, <span class="s0">int </span>nrOfRectangles) {
+<a name="l33"><span class="ln">33   </span></a>        <span class="s0">int </span>i = <span class="s4">1</span>;
+<a name="l34"><span class="ln">34   </span></a>        <span class="s0">while </span>(i &lt;= nrOfRectangles) {
+<a name="l35"><span class="ln">35   </span></a>            paintOneRectangle(painter);  <span class="s2">// ask IntelliJ to generate the stub</span>
+<a name="l36"><span class="ln">36   </span></a>            i = i + <span class="s4">1</span>;
+<a name="l37"><span class="ln">37   </span></a>        }
+<a name="l38"><span class="ln">38   </span></a>    }
+<a name="l39"><span class="ln">39   </span></a>
+<a name="l40"><span class="ln">40   </span></a>    <span class="s0">private void </span>paintOneRectangle(SPainter painter) {
+<a name="l41"><span class="ln">41   </span></a>        Random rgen = <span class="s0">new </span>Random();
+<a name="l42"><span class="ln">42   </span></a>        <span class="s0">int </span>rn = rgen.nextInt(<span class="s4">6</span>);
+<a name="l43"><span class="ln">43   </span></a>        <span class="s0">if </span>(rn == <span class="s4">0</span>) {
+<a name="l44"><span class="ln">44   </span></a>            painter.setColor(<span class="s0">new </span>Color(<span class="s4">255</span>, <span class="s4">83</span>, <span class="s4">13 </span>));
+<a name="l45"><span class="ln">45   </span></a>        }
+<a name="l46"><span class="ln">46   </span></a>        <span class="s0">else if </span>(rn == <span class="s4">1</span>) {
+<a name="l47"><span class="ln">47   </span></a>            painter.setColor(<span class="s0">new </span>Color(<span class="s4">41</span>, <span class="s4">164</span>, <span class="s4">255 </span>));
+<a name="l48"><span class="ln">48   </span></a>        }
+<a name="l49"><span class="ln">49   </span></a>        <span class="s0">else if </span>(rn == <span class="s4">2</span>) {
+<a name="l50"><span class="ln">50   </span></a>            painter.setColor(<span class="s0">new </span>Color(<span class="s4">255</span>, <span class="s4">13</span>, <span class="s4">255 </span>));
+<a name="l51"><span class="ln">51   </span></a>        }
+<a name="l52"><span class="ln">52   </span></a>        <span class="s0">else if </span>(rn == <span class="s4">3</span>) {
+<a name="l53"><span class="ln">53   </span></a>            painter.setColor(<span class="s0">new </span>Color(<span class="s4">28</span>, <span class="s4">255</span>, <span class="s4">230 </span>));
+<a name="l54"><span class="ln">54   </span></a>        }
+<a name="l55"><span class="ln">55   </span></a>        <span class="s0">else if </span>(rn == <span class="s4">4</span>) {
+<a name="l56"><span class="ln">56   </span></a>            painter.setColor(<span class="s0">new </span>Color(<span class="s4">255</span>, <span class="s4">250</span>, <span class="s4">88 </span>));
+<a name="l57"><span class="ln">57   </span></a>        }
+<a name="l58"><span class="ln">58   </span></a>        <span class="s0">else </span>{
+<a name="l59"><span class="ln">59   </span></a>            <span class="s0">int </span>r = rgen.nextInt(<span class="s4">255</span>);
+<a name="l60"><span class="ln">60   </span></a>            <span class="s0">int </span>b = rgen.nextInt(<span class="s4">255</span>);
+<a name="l61"><span class="ln">61   </span></a>            <span class="s0">int </span>y = rgen.nextInt(<span class="s4">255</span>);
+<a name="l62"><span class="ln">62   </span></a>            painter.setColor(<span class="s0">new </span>Color(r,b,y));
+<a name="l63"><span class="ln">63   </span></a>        }
+<a name="l64"><span class="ln">64   </span></a>        painter.move();
+<a name="l65"><span class="ln">65   </span></a>        <span class="s0">int </span>recSide = <span class="s4">30</span>;
+<a name="l66"><span class="ln">66   </span></a>        SRectangle rec = <span class="s0">new </span>SRectangle(recSide, recSide*<span class="s4">2</span>);
+<a name="l67"><span class="ln">67   </span></a>        painter.paint(rec);
+<a name="l68"><span class="ln">68   </span></a>        painter.setColor(Color.BLACK);
+<a name="l69"><span class="ln">69   </span></a>        painter.draw(rec);
+<a name="l70"><span class="ln">70   </span></a>    }
+<a name="l71"><span class="ln">71   </span></a>
+<a name="l72"><span class="ln">72   </span></a>}
+<a name="l73"><span class="ln">73   </span></a>
+<a name="l74"><span class="ln">74   </span></a></pre>
+</body>
+</html>

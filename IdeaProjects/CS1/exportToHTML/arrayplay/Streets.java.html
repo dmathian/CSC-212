@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Streets.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #0000ff;}
+.s3 { color: #008000; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Streets.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span>arrayplay;
+
+<span class="s0">public class </span>Streets {
+
+    <span class="s0">public static void </span>main(String[] args) {
+        String[] streets = <span class="s0">new </span>String[<span class="s2">12</span>];
+
+        streets[<span class="s2">0</span>] = <span class="s3">&quot;Iberville&quot;</span>;
+        streets[<span class="s2">1</span>] = <span class="s3">&quot;Decatur&quot;</span>;
+        streets[<span class="s2">2</span>] = <span class="s3">&quot;Toulouse&quot;</span>;
+        streets[<span class="s2">3</span>] = <span class="s3">&quot;Bourbon&quot;</span>;
+        streets[<span class="s2">4</span>] = <span class="s3">&quot;Dauphine&quot;</span>;
+        streets[<span class="s2">5</span>] = <span class="s3">&quot;Royal&quot;</span>;
+        streets[<span class="s2">6</span>] = <span class="s3">&quot;St Ann&quot;</span>;
+        streets[<span class="s2">7</span>] = <span class="s3">&quot;St Peter&quot;</span>;
+        streets[<span class="s2">8</span>] = <span class="s3">&quot;Conti&quot;</span>;
+        streets[<span class="s2">9</span>] = <span class="s3">&quot;Exchange&quot;</span>;
+        streets[<span class="s2">10</span>] = <span class="s3">&quot;Bienville&quot;</span>;
+        streets[<span class="s2">11</span>] = <span class="s3">&quot;Dumaine&quot;</span>;
+
+     System.out.println(<span class="s3">&quot;Length of Array = &quot; </span>+ streets.length);
+     System.out.println(<span class="s3">&quot;First Element of Array = &quot; </span>+ streets[<span class="s2">0</span>]);
+     System.out.println(<span class="s3">&quot;Last Element of Array = &quot; </span>+ streets[<span class="s2">11</span>]);
+
+
+     System.out.println(<span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">The initial array ...&quot;</span>);
+
+        <span class="s0">int </span>i = <span class="s2">0</span>;
+        <span class="s0">while </span>(i &lt; streets.length) {
+
+     System.out.println(streets[i]);
+         i = i + <span class="s2">1</span>;
+     }
+
+     String swap = streets[<span class="s2">0</span>];
+     streets[<span class="s2">0</span>] = streets[streets.length - <span class="s2">1</span>];
+     streets[streets.length - <span class="s2">1</span>] = swap;
+
+
+     System.out.println(<span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">The final array ...&quot;</span>);
+      <span class="s0">for </span>( <span class="s0">int </span>x = <span class="s2">0</span>; x &lt; streets.length; x = x + <span class="s2">1 </span>) {
+        System.out.println(streets[x]);
+
+    }
+   }
+ }
+</pre>
+</body>
+</html>
